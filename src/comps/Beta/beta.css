@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-weight: bold;
+  color: cornsilk;
+}
+
+.my-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.nav-item {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+/* this is the defalut/mobile screen arangement */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  /* when defining 4 rows, that implicitly defines 5 row lines */
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+  "title title title title"
+  "header header header header"
+  "sidebar content content content"
+  "sidebar footer footer footer";
+}
+
+.grid div {
+  border: 2px solid green;
+  font-size: 50px;
+
+}
+
+
+.title {
+  grid-area: title;
+}
+
+.header {
+  grid-area: header;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  /* to customize the alignment/justification of grid-area's content */
+  justify-self: start; /* OR end, center */
+}
+
+.content {
+  grid-area: content;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+/* DESKTOP LAYOUT  */
+
+/* Use '.' ("punctuation") to indicate a
+blank spot in the grid, effectivly creating a 50px margin to
+the left and right via empty grid sections */
+@media screen and (min-width: 760px) {
+  .grid {
+    grid-template-columns: 50px 1fr 1fr 50px;
+    grid-template-areas:
+    ". title title ."
+    ". header header ."
+    ". sidebar content ."
+    ". footer footer .";
+  }
+}

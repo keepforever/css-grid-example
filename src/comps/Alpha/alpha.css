@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  color: cornsilk;
+}
+
+.grid {
+  display: grid;
+  /* define number of columns in the grid.
+  1fr = one column, 1fr 1fr = two equal colums, 1fr 2fr = two columns where the second column is twice a large as the first. 200px, 20%, and auto are all valid measurements along with 1fr for defining column width. */
+  grid-template-columns: 1fr 1fr;
+  /* with two colums, you have 3 grid lines that define those columns. We can use
+  those grid lines in the child elements to reference their start stop span */
+}
+
+.title {
+  /* grid-column-start: 1;
+  grid-column-end: 3; */
+  /* equivalently
+  grid-column: 1 / 3;
+  grid-column-end: span 2;
+  */
+  grid-row-end: span 2;
+
+}
