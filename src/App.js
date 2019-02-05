@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import MyGrid from './comps/MyGrid/MyGrid'
-import Alpha from './comps/Alpha/Alpha';
 import Beta from './comps/Beta/Beta';
+import Colide from './comps/Colide';
 
 import "./App.css";
 
@@ -9,8 +8,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <Colide />
         <Beta />
-        {/* <Alpha />
+        {/*  <Beta />
+       <Colide />
+        <Alpha />
         <br/> */}
         {/* <MyGrid /> */}
       </div>
