@@ -1,39 +1,39 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import s from "./layout.module.css";
+import { Link } from "react-router-dom";
 
-const linksConfig = [
-  {
-    to: '/',
-    text: 'Home'
-  },
-  {
-    to: '/alpha',
-    text: 'Alpha'
-  },
-  {
-    to: '/beta',
-    text: 'Beta'
-  },
-  {
-    to: '/theta',
-    text: 'Theta'
-  }
-]
-
-export default ( {children} ) => {
+export default ({ children }) => {
   return (
-    <div style={{width: '100%', display: 'flex', flexDirection: 'column', alignItems:'center'}}>
-      <div style={{width: '100%', display: 'flex', flexDirection: 'row', justifyContent: 'space-around'}}>
+    <div className={s.container}>
+      <nav className={s.tempNav}>
         {linksConfig.map(l => {
           return (
             <Link key={l.text} to={l.to}>
               {l.text}
             </Link>
-          )
+          );
         })}
-      </div>
-
+      </nav>
       {children}
     </div>
-  )
+  );
 };
+
+const linksConfig = [
+  {
+    to: "/",
+    text: "Home"
+  },
+  {
+    to: "/alpha",
+    text: "Alpha"
+  },
+  {
+    to: "/beta",
+    text: "Beta"
+  },
+  {
+    to: "/theta",
+    text: "Theta"
+  }
+];

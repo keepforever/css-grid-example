@@ -8,9 +8,9 @@ class Alpha extends Component {
       <div className="grid">
         <div className="title">
           <ul className="my-list">
-            <li className="nav-item">Home</li>
-            <li className="nav-item">About</li>
-            <li className="nav-item">Contact</li>
+            <li className="nav-item">li 1</li>
+            <li className="nav-item">li 2</li>
+            <li className="nav-item">li 3</li>
           </ul>
         </div>
         <div className="header">Header</div>
