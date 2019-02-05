@@ -1,9 +1,20 @@
-import React from 'react';
-import s from './navbar.module.css';
+import React from "react";
+import { Link } from 'react-router-dom';
 
-export default  ( props ) => {
+import config from '../../config';
+import s from "./navbar.module.css";
+
+export default props => {
+  const { links } = config;
   return (
-    <div className={s.grid}>
-    </div>
-  )
+    <nav className={s.grid}>
+      {links.map(l => {
+        return (
+          <Link key={l.text} to={l.to}>
+            {l.text}
+          </Link>
+        );
+      })}
+    </nav>
+  );
 };

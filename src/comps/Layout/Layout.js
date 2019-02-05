@@ -1,39 +1,14 @@
 import React from "react";
 import s from "./layout.module.css";
-import { Link } from "react-router-dom";
+import Navbar from "../Navbar/Navbar";
 
 export default ({ children }) => {
   return (
-    <div className={s.container}>
-      <nav className={s.tempNav}>
-        {linksConfig.map(l => {
-          return (
-            <Link key={l.text} to={l.to}>
-              {l.text}
-            </Link>
-          );
-        })}
-      </nav>
-      {children}
+    <div>
+      <Navbar />
+      <div className={s.container}>
+        {children}
+      </div>
     </div>
   );
 };
-
-const linksConfig = [
-  {
-    to: "/",
-    text: "Home"
-  },
-  {
-    to: "/alpha",
-    text: "Alpha"
-  },
-  {
-    to: "/beta",
-    text: "Beta"
-  },
-  {
-    to: "/theta",
-    text: "Theta"
-  }
-];

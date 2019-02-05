@@ -1,9 +1,9 @@
+/* auto-fill: takes the rest of the space and adds more columns
+auto-fit: takes the additional space and collapeses the columns that would otherwise occupy them, almost like they don't exist  */
 .grid {
-  display: flex;
-}
-
-.menu-items:not(.grid){
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 100px);
+  grid-column-gap: 20px;
+  grid-row-gap: 8px;
+  justify-content: center;
 }
