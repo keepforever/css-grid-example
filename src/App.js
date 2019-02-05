@@ -1,21 +1,13 @@
 import React, { Component } from 'react';
-import Beta from './comps/Beta/Beta';
-import Colide from './comps/Colide';
-
-import "./App.css";
+import { BrowserRouter } from 'react-router-dom';
+import Routes from './Routes';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Colide />
-        <Beta />
-        {/*  <Beta />
-       <Colide />
-        <Alpha />
-        <br/> */}
-        {/* <MyGrid /> */}
-      </div>
+      <BrowserRouter>
+        <Routes />
+      </BrowserRouter>
     );
   }
 }
